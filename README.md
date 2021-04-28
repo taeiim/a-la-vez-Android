@@ -1,1 +1,0 @@
-# a-la-vez-Android
