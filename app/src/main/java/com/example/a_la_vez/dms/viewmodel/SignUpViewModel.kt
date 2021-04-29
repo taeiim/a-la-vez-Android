@@ -18,5 +18,7 @@ class SignUpViewModel {
     }
     fun SignPost(){
         DataclassListLiveData= signUpRepository?.SignPost()
+
+        
     }
 }
