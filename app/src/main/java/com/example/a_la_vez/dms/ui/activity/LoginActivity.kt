@@ -1,4 +1,4 @@
-package com.example.a_la_vez.dms.ui
+package com.example.a_la_vez.dms.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

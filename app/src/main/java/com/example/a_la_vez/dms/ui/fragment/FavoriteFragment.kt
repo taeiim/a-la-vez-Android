@@ -1,4 +1,4 @@
-package com.example.a_la_vez.dms
+package com.example.a_la_vez.dms.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
