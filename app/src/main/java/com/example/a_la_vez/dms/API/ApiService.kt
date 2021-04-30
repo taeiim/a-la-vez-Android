@@ -9,7 +9,7 @@ interface ApiService {
 
     //회원가입 Post로 요청할 때 , Body에 넣어서 보내는 것
     @POST("/auth/join")
-    fun SignUp(@Body body : Body) : Call<Dataclass>
+    fun SignPost(@Body body : Body) : Call<Dataclass>
 
 
 }
