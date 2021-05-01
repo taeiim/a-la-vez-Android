@@ -1,6 +1,7 @@
 package com.example.a_la_vez.dms.viewmodel
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.example.a_la_vez.dms.data.SignUpRepository
 import com.example.a_la_vez.dms.model.Dataclass
 
@@ -13,7 +14,8 @@ class SignUpViewModel {
     init{
         signUpRepository = SignUpRepository()
         //여기에 추가로
-        DataclassListLiveData = MutableListData()
+        DataclassListLiveData= MutableLiveData()
+
 
     }
     fun SignPost(){
