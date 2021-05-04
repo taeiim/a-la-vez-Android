@@ -8,3 +8,13 @@ data class Dataclass(
     var re_password : String = ""
 )
 
+data class userLogin(
+        var email: String,
+        var password: String
+)
+
+//로그인 롹인
+data class checkCode(
+       var code : Int,
+       val user : String
+)
