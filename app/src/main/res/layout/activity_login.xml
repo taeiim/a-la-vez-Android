@@ -6,3 +6,6 @@
     android:layout_height="match_parent"
     android:background=" #6f2dff"
     tools:context=".dms.ui.activity.LoginActivity"/>
+
+
+
