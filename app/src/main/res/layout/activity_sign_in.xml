@@ -7,13 +7,24 @@
     tools:context=".dms.ui.activity.SignInActivity">
 
     <TextView
+        android:id="@+id/tv_emailtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email을 입력해주세요"
+        app:layout_constraintBottom_toTopOf="@+id/cover_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="76dp"
         android:text="Login"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.221"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,13 +33,12 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="272dp"
         android:layout_height="67dp"
-        android:layout_marginBottom="448dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_passwordtitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="200dp"
-        app:layout_constraintVertical_bias="0.075">
+        app:layout_constraintTop_toBottomOf="100dp"
+        app:startIconDrawable="@drawable/ic_baseline_person_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_email"
@@ -38,15 +48,16 @@
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <TextView
-        android:id="@+id/tv_emailtitle"
+        android:id="@+id/tv_passwordtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="email을 입력해주세요"
-        app:layout_constraintBottom_toTopOf="@+id/cover_email"
+        android:layout_marginBottom="8dp"
+        android:text="password를 입력해주세요"
+        app:layout_constraintBottom_toTopOf="@+id/cover_password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintHorizontal_bias="0.27"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -54,11 +65,12 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="272dp"
         android:layout_height="67dp"
-        android:layout_marginBottom="184dp"
+        android:layout_marginBottom="316dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:startIconDrawable="@drawable/ic_baseline_https_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_password"
@@ -70,14 +82,27 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/tv_passwordtitle"
+        android:id="@+id/tv_forgetpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="password를 입력해주세요"
-        app:layout_constraintBottom_toTopOf="@+id/cover_password"
+        android:layout_marginTop="24dp"
+        android:text="비밀번호를 잊으셨나요?"
+        android:textSize="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cover_password" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_btn"
+        android:layout_width="187dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="128dp"
+        android:text="Login"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent" />
 
 
