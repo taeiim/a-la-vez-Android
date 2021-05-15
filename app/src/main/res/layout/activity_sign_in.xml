@@ -7,24 +7,26 @@
     tools:context=".dms.ui.activity.SignInActivity">
 
     <TextView
-        android:id="@+id/tv_emailtitle"
+        android:id="@+id/email_title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email을 입력해주세요"
+        android:fontFamily="@font/so"
         app:layout_constraintBottom_toTopOf="@+id/cover_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.27"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tv_title"
+        android:id="@+id/title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:text="Login"
+        android:layout_marginTop="116dp"
+        android:fontFamily="@font/so"
+        android:text="LOGIN"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintHorizontal_bias="0.197"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,7 +35,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="272dp"
         android:layout_height="67dp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_passwordtitle"
+        app:layout_constraintBottom_toTopOf="@+id/passwordtitle_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +43,7 @@
         app:startIconDrawable="@drawable/ic_baseline_person_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_email"
+            android:id="@+id/email_et"
             android:layout_width="match_parent"
             android:layout_height="57dp"
             android:hint=""
@@ -50,11 +52,12 @@
 
 
     <TextView
-        android:id="@+id/tv_passwordtitle"
+        android:id="@+id/passwordtitle_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="password를 입력해주세요"
+        android:fontFamily="@font/so"
         app:layout_constraintBottom_toTopOf="@+id/cover_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.27"
@@ -73,7 +76,7 @@
         app:startIconDrawable="@drawable/ic_baseline_https_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_password"
+            android:id="@+id/password_et"
             android:layout_width="match_parent"
             android:layout_height="57dp"
             android:inputType="textPassword"
@@ -82,11 +85,12 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/tv_forgetpassword"
+        android:id="@+id/forgetpassword_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="비밀번호를 잊으셨나요?"
+        android:fontFamily="@font/so"
         android:textSize="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
