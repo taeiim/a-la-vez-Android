@@ -10,8 +10,11 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
+    }
 
 
+    //이메일 확인
+    private fun CheckCode(){
 
     }
 }

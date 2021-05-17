@@ -1,5 +1,6 @@
 package com.example.a_la_vez.dms.model
 
+//회원가입
 data class SignUp(
     val name : String = "",
     val nick : String = "",
@@ -8,6 +9,8 @@ data class SignUp(
     val re_password : String = ""
 )
 
+
+//로그인
 data class UserLogin(
         val email: String,
         val password: String

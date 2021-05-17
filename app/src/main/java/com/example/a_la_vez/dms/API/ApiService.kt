@@ -23,7 +23,7 @@ interface ApiService {
     //로그인
     @POST("/auth/login")
     fun login(
-            @Query("ddfs") email : String,
+            @Query("email") email : String,
             @Query("password") password: String
     ): Single<Response<UserLogin>>
 
