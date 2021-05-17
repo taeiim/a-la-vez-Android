@@ -14,10 +14,6 @@ buildscript {
         materialVersion = '1.0.0'
         navigationVersion = '2.1.0-alpha04'
         recyclerViewVersion = '1.1.0-alpha05'
-        rxandroidVersion = '2.1.0'
-        rxjava2Version = '2.2.2'
-        rx2FastAndroidNetworking = '1.0.2'
-        roomVersion = '2.1.0-beta01'
         supportLibraryVersion = '1.1.0-alpha05'
         timberVersion = '4.7.1' }
 
