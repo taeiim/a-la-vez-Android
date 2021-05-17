@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Alavez">
-        <activity android:name=".dms.ui.activity.SignInActivity"></activity>
+        <activity android:name=".dms.ui.activity.IntrodeveloperActivity"></activity>
+        <activity android:name=".dms.ui.activity.ForgetPasswordActivity" />
+        <activity android:name=".dms.ui.activity.SignInActivity" />
         <activity android:name=".dms.ui.activity.SignUpActivity" />
-        <activity android:name=".dms.ui.activity.LoginActivity" />
-        <activity android:name=".dms.base.BaseActivity" />
-        <activity android:name=".dms.MainActivity">
+        <activity android:name=".dms.ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

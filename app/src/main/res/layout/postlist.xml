@@ -6,10 +6,9 @@
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="post_item"
+        android:id="@+id/post_item"
         android:layout_width="352dp"
-        android:layout_height="114dp"
-       >
+        android:layout_height="114dp">
 
         <TextView
             android:id="@+id/title_tv"
