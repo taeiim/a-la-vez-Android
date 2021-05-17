@@ -14,6 +14,14 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
+    }
 
+<<<<<<< HEAD
+=======
+
+    //이메일 확인
+    private fun CheckCode(){
+
+>>>>>>> mypage
     }
 }

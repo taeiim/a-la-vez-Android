@@ -8,11 +8,12 @@ import java.util.concurrent.TimeUnit
 
 
 const val BASEURL = "http://localhost:3000"
+
 class ApiClient {
 
-    companion object{
-        private var retrofit : Retrofit?= null
-        fun getApiClient () : Retrofit {
+    companion object {
+        private var retrofit: Retrofit? = null
+        fun getApiClient(): Retrofit {
             val gson = GsonBuilder()
                 .setLenient()
                 .create()
@@ -30,6 +31,5 @@ class ApiClient {
             }
             return retrofit!!
         }
-        }
-
     }
+}
