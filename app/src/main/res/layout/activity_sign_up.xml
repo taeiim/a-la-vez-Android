@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
     tools:context=".dms.ui.activity.SignUpActivity">
 
     <TextView
@@ -14,7 +13,7 @@
         android:layout_marginBottom="24dp"
         android:text="SignUp"
         android:textSize="30dp"
-        android:fontFamily="@font/so"
+        android:fontFamily="@font/so2"
         app:layout_constraintBottom_toTopOf="@+id/cover_nickname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.203"
@@ -23,8 +22,11 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cover_nickname"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="272dp"
-        android:layout_height="67dp"
+        android:layout_width="280dp"
+        android:layout_height="92dp"
+        app:counterMaxLength="8"
+        app:counterEnabled="true"
+        app:helperTextTextColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.438"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="57dp"
             android:inputType="textPassword"
+            android:maxLength="8"
             android:scrollHorizontally="true" />
 
     </com.google.android.material.textfield.TextInputLayout>
