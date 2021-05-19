@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".dms.MypageFragment">
+    tools:context=".dms.ui.activity.MainActivity">
 
     <TextView
         android:id="@+id/textView2"
@@ -54,14 +54,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
-    <EditText
+    <TextView
         android:id="@+id/nickname_et"
-        android:layout_width="117dp"
-        android:layout_height="49dp"
+        android:layout_width="72dp"
+        android:layout_height="19dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="32dp"
-        android:gravity="center"
-        android:text="안드짱짱"
+        android:text="이은별"
         android:textColor="@color/black"
         android:textSize="19dp"
         app:layout_constraintStart_toEndOf="@+id/profile_image"
@@ -69,25 +68,14 @@
 
     <ImageView
         android:id="@+id/modify_nickname_ic"
-        android:layout_width="9dp"
-        android:layout_height="9dp"
+        android:layout_width="15dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
         android:src="@drawable/pencil"
         app:layout_constraintBottom_toTopOf="@+id/view2"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.343"
-        tools:layout_editor_absoluteX="313dp" />
-
-    <TextView
-        android:id="@+id/real_name_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="이은별"
-        android:textSize="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toEndOf="@+id/nickname_et"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.21" />
 
     <TextView
         android:id="@+id/mypost_tv"
@@ -102,8 +90,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/post_rc"
-        android:layout_width="351dp"
-        android:layout_height="351dp"
+        android:layout_width="364dp"
+        android:layout_height="369dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mypost_tv" />
@@ -116,7 +104,7 @@
         android:layout_marginTop="8dp"
         android:text="개발자소개"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintHorizontal_bias="0.005"
         app:layout_constraintStart_toEndOf="@+id/profile_image"
         app:layout_constraintTop_toBottomOf="@+id/nickname_et" />
 
