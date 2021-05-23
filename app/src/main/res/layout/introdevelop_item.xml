@@ -6,17 +6,19 @@
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/item_border"
         android:layout_width="match_parent"
-        android:layout_height="145dp">
+        android:layout_height="144dp">
 
         <ImageView
             android:id="@+id/develop_img"
-            android:layout_width="118dp"
-            android:layout_height="97dp"
-            android:layout_marginStart="16dp"
+            android:layout_width="93dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="40dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.457"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
@@ -24,12 +26,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:fontFamily="@font/so"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/so2"
             android:text="TextView"
             android:textSize="30dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintHorizontal_bias="0.038"
             app:layout_constraintStart_toEndOf="@+id/develop_img"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/so"
-            android:text="TextView"
+            android:text=""
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
