@@ -9,8 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.a_la_vez.R
 
-class adapter(val context: Context, val devList: ArrayList<Developer>) :
-    RecyclerView.Adapter<adapter.Holder>() {
+class adapter(val context: Context, val devList: ArrayList<Developer>) : RecyclerView.Adapter<adapter.Holder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view = LayoutInflater.from(context).inflate(R.layout.introdevelop_item, parent, false)
@@ -32,13 +31,8 @@ class adapter(val context: Context, val devList: ArrayList<Developer>) :
 
 
         fun bind(developer: Developer, context: Context) {
-            /* 이미지가 없는 경우 안드로이드 기본 아이콘을 표시한다.*/
             if (developer.photo != "") {
-                val resourceId = context.resources.getIdentifier(
-                    developer.photo,
-                    "drawable",
-                    context.packageName
-                )
+                val resourceId = context.resources.getIdentifier(developer.photo, "drawable", context.packageName)
                 Photo?.setImageResource(resourceId)
             } else {
                 Photo?.setImageResource(R.mipmap.ic_launcher)
