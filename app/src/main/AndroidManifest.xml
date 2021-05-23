@@ -9,12 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Alavez">
-<<<<<<< HEAD
-        <activity android:name=".dms.ui.activity.ForgetPasswordActivity"></activity>
-=======
         <activity android:name=".dms.ui.activity.IntrodeveloperActivity"></activity>
-        <activity android:name=".dms.ui.activity.ForgetPasswordActivity" />
->>>>>>> mypage
         <activity android:name=".dms.ui.activity.SignInActivity" />
         <activity android:name=".dms.ui.activity.SignUpActivity" />
         <activity android:name=".dms.ui.activity.MainActivity">
