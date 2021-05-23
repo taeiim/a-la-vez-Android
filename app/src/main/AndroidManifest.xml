@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Alavez">
         <activity android:name=".dms.ui.activity.IntrodeveloperActivity"></activity>
-        <activity android:name=".dms.ui.activity.ForgetPasswordActivity" />
         <activity android:name=".dms.ui.activity.SignInActivity" />
         <activity android:name=".dms.ui.activity.SignUpActivity" />
         <activity android:name=".dms.ui.activity.MainActivity">

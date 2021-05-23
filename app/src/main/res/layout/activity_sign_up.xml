@@ -4,20 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
     tools:context=".dms.ui.activity.SignUpActivity">
 
     <TextView
         android:id="@+id/title2_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/so2"
         android:text="SignUp"
         android:textSize="30dp"
-        android:fontFamily="@font/so"
         app:layout_constraintBottom_toTopOf="@+id/cover_nickname"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -25,34 +24,16 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="272dp"
         android:layout_height="67dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/cover_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.438"
         app:layout_constraintStart_toStartOf="parent"
-        app:startIconDrawable="@drawable/ic_baseline_person_24"
-        tools:layout_editor_absoluteY="140dp">
+        app:startIconDrawable="@drawable/ic_baseline_person_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nickname_et"
-            android:layout_width="match_parent"
-            android:layout_height="57dp"
-            android:inputType="textPassword"
-            android:scrollHorizontally="true" />
 
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/cover_email"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="272dp"
-        android:layout_height="67dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.438"
-        app:layout_constraintStart_toStartOf="parent"
-        app:startIconDrawable="@drawable/ic_baseline_email_24"
-        tools:layout_editor_absoluteY="246dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email_et"
             android:layout_width="match_parent"
             android:layout_height="57dp"
             android:inputType="textPassword"
@@ -62,15 +43,16 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cover_password_signup"
-        android:visibility="visible"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="272dp"
         android:layout_height="67dp"
+        android:layout_marginBottom="35dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/cover_repassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.438"
         app:layout_constraintStart_toStartOf="parent"
-        app:startIconDrawable="@drawable/ic_baseline_https_24"
-        tools:layout_editor_absoluteY="344dp">
+        app:startIconDrawable="@drawable/ic_baseline_https_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password_signup_et"
@@ -86,11 +68,12 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="272dp"
         android:layout_height="67dp"
+        android:layout_marginBottom="75dp"
+        app:layout_constraintBottom_toTopOf="@+id/login_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.438"
         app:layout_constraintStart_toStartOf="parent"
-        app:startIconDrawable="@drawable/ic_baseline_https_24"
-        tools:layout_editor_absoluteY="447dp">
+        app:startIconDrawable="@drawable/ic_baseline_https_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/repassword_et"
@@ -101,13 +84,35 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cover_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="272dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/cover_password_signup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toStartOf="parent"
+        app:startIconDrawable="@drawable/ic_baseline_email_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_et"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:inputType="textPassword"
+            android:scrollHorizontally="true" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/login_btn"
-        android:layout_width="187dp"
-        android:layout_height="35dp"
+        android:layout_width="259dp"
+        android:layout_height="38dp"
         android:layout_marginBottom="128dp"
-        android:text="Login"
+        android:text="가입하기"
         android:textSize="10dp"
+        android:backgroundTint="#76ACDB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.463"

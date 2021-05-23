@@ -1,8 +1,6 @@
 package com.example.a_la_vez.dms.API
 
-import com.example.a_la_vez.dms.model.CheckCode
-import com.example.a_la_vez.dms.model.User
-import com.example.a_la_vez.dms.model.UserLogin
+import com.example.a_la_vez.dms.model.checkCode
 import io.reactivex.Single
 import retrofit2.Response
 import retrofit2.http.Body
@@ -25,17 +23,11 @@ interface ApiService {
     fun login(
             @Query("email") email : String,
             @Query("password") password: String
-    ): Single<Response<UserLogin>>
+    ): Single<Response<Any>>
 
     //이메일 인증
     @POST("/auth/code")
     fun checkCode(
-            @Body checkCode: CheckCode
-    )
-
-
-
-
-
-
+            @Body CheckCode: checkCode
+    ):Single<Response<checkCode>>
 }
