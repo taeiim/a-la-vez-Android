@@ -12,12 +12,12 @@
 
         <TextView
             android:id="@+id/title_tv"
-            android:layout_width="129dp"
-            android:layout_height="42dp"
+            android:layout_width="231dp"
+            android:layout_height="41dp"
             android:layout_marginTop="16dp"
-            android:text="TextView"
+            android:text="2학년 안드스터디 모집합니다"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintHorizontal_bias="0.165"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,10 +25,23 @@
             android:id="@+id/content_tv"
             android:layout_width="264dp"
             android:layout_height="31dp"
-            android:text="TextView"
+            android:fontFamily="@font/so"
+            android:text="간단한 지식만 있으면 됩니다!"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.231"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title_tv" />
+
+        <ImageView
+            android:id="@+id/heart_img"
+            android:layout_width="21dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/content_tv"
+            app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
