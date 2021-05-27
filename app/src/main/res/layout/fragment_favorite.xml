@@ -5,10 +5,20 @@
     android:layout_height="match_parent"
     tools:context=".dms.ui.activity.MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
+    <TextView
+        android:id="@+id/title_tv4"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="14dp"
+        android:gravity=" "
+        android:text="나의 관심 study"
+        android:textSize="32dp"
+        android:fontFamily="@font/so2"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favoritelist_rc"
+        android:layout_width="match_parent"
+        android:layout_height="734dp"
+        android:layout_marginTop="120dp" />
 </FrameLayout>
