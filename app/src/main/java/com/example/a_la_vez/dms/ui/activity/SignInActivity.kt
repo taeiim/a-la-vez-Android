@@ -33,27 +33,37 @@ class SignInActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_in)
 
         login_btn.setOnClickListener() {
-            if (email_et.text.toString() == "" || password_et.text.toString() == "") {
-                val Toast = Toast.makeText(this, "공백 없이 입력하세요", Toast.LENGTH_SHORT)
-                Toast.show()
-            } else if (email_et.text.toString().length < 15 || password_et.text.toString().length < 15) {
-                val Toast = Toast.makeText(this, "형식에 맞게 입력하세요", Toast.LENGTH_SHORT)
-                Toast.show()
-            }
-            //로그인 형식이 맞음
-            else {
-                val login = UserLogin(email_et.toString(), password_et.toString())
-                val loginInterface = ApiClient()
-                val Toast = Toast.makeText(this, "로그인에 성공하셨습니다", Toast.LENGTH_SHORT)
-                intent()
-                toast.show()
-
-            }
         }
     }
 
     private fun intent() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
+    }
+
+
+    fun login(){
+
+        if (email_et.text.toString() == "" || password_et.text.toString() == "") {
+            val Toast = Toast.makeText(this, "공백 없이 입력하세요", Toast.LENGTH_SHORT)
+
+            Toast.show()
+        } else if (email_et.text.toString().length < 15 || password_et.text.toString().length < 15) {
+            val Toast = Toast.makeText(this, "형식에 맞게 입력하세요", Toast.LENGTH_SHORT)
+            Toast.show()
+        }
+
+        else {
+            doLogin(email_et.toString(), password_et.toString())
+            val Toast = Toast.makeText(this, "로그인에 성공하셨습니다", Toast.LENGTH_SHORT)
+            intent()
+            toast.show()
+
+        }
+
+    }
+
+    private fun doLogin(email:String, password:String){
+        ApiClient.getApiClient().login(email,password).body()
     }
 }

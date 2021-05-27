@@ -13,7 +13,8 @@ class ApiClient {
 
     companion object {
         private var retrofit: Retrofit? = null
-        fun getApiClient(): Retrofit {
+        private var retrofitApi : ApiService? = null
+        fun getApiClient(): ApiService {
             val gson = GsonBuilder()
                 .setLenient()
                 .create()
@@ -29,7 +30,8 @@ class ApiClient {
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .build()
             }
-            return retrofit!!
+            retrofitApi = retrofit?.create(ApiService::class.java)
+            return retrofitApi!!
         }
     }
 }
