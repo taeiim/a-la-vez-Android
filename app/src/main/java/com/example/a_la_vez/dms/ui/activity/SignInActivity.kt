@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import com.example.a_la_vez.R
 import com.example.a_la_vez.dms.API.ApiClient
+import com.example.a_la_vez.dms.model.DataClass
 import com.example.a_la_vez.dms.model.UserLogin
 import kotlinx.android.synthetic.main.activity_sign_in.*
 import kotlinx.android.synthetic.main.activity_sign_in.login_btn
@@ -33,6 +34,24 @@ class SignInActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_in)
 
         login_btn.setOnClickListener() {
+            login()
+        }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        if (System.currentTimeMillis() > pressedTime + 2500) {
+            pressedTime = System.currentTimeMillis().toInt()
+            toast = Toast.makeText(this, "djfkjkd", Toast.LENGTH_SHORT)
+            toast.show()
+            return
+        }
+        if (System.currentTimeMillis() <= pressedTime + 2500) {
+            finishAffinity()
+            toast.cancel()
+
+
         }
     }
 
@@ -41,8 +60,7 @@ class SignInActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-
-    fun login(){
+    fun login() {
 
         if (email_et.text.toString() == "" || password_et.text.toString() == "") {
             val Toast = Toast.makeText(this, "공백 없이 입력하세요", Toast.LENGTH_SHORT)
@@ -51,19 +69,19 @@ class SignInActivity : AppCompatActivity() {
         } else if (email_et.text.toString().length < 15 || password_et.text.toString().length < 15) {
             val Toast = Toast.makeText(this, "형식에 맞게 입력하세요", Toast.LENGTH_SHORT)
             Toast.show()
-        }
-
-        else {
+        } else {
             doLogin(email_et.toString(), password_et.toString())
             val Toast = Toast.makeText(this, "로그인에 성공하셨습니다", Toast.LENGTH_SHORT)
             intent()
             toast.show()
 
+
         }
+
 
     }
 
-    private fun doLogin(email:String, password:String){
-        ApiClient.getApiClient().login(email,password).body()
+    private fun doLogin(email: String, password: String) {
+        ApiClient.getApiClient().login(email, password).body()
     }
 }

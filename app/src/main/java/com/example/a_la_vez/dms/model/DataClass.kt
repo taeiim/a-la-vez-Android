@@ -2,7 +2,6 @@ package com.example.a_la_vez.dms.model
 
 //회원가입
 data class DataClass(
-    val name : String ,
     val nick : String ,
     val email : String ,
     val password : String ,

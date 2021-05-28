@@ -10,18 +10,18 @@ import retrofit2.http.Query
 interface ApiService {
 
     //회원가입
-   @POST("/auth/join")
-    fun signPost(@Query("name") name: String,
-                 @Query("nick") nick: String,
-                 @Query("email") email: String,
-                 @Query("password") password: String,
-                 @Query("re_password") re_password: String,
+    @POST("/auth/join")
+    fun signPost(
+            @Query("nick") nick: String,
+            @Query("email") email: String,
+            @Query("password") password: String,
+            @Query("re_password") re_password: String,
     ): Response<Any>
 
     //로그인
     @POST("/auth/login")
     fun login(
-            @Query("email") email : String,
+            @Query("email") email: String,
             @Query("password") password: String
     ): Response<Any>
 
@@ -29,5 +29,5 @@ interface ApiService {
     @POST("/auth/code")
     fun checkCode(
             @Body CheckCode: checkCode
-    ):Single<Response<checkCode>>
+    ): Single<Response<checkCode>>
 }
